@@ -24,7 +24,7 @@
 
 .certificado{
   width: 800px;
-  background-image: url('../../../../public/certificate/certificate_bg.svg') !important;
+  background-image: url('../../../../public/certificate/certificate_bg.png') !important;
   height: 550px;
   margin-top: 32px;
   background-size: cover;
