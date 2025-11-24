@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SecondaryButton } from "../secondary-button/secondary-button";
 import { RouterLink } from "@angular/router";
 import { Router } from '@angular/router';
