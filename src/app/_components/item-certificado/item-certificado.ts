@@ -10,12 +10,14 @@ import { Router } from '@angular/router';
   styleUrl: './item-certificado.css',
 })
 export class ItemCertificado {
-  id: string ='3';
+  @Input() nomeAluno : string = '';
+  @Input() dataEmissao : string = '';
+  @Input() idCertificado : string = '';
   constructor(private router: Router) {
 
   }
 
   redirecionaCertificado(){
-    this.router.navigate(['/certificados', this.id]);
+    this.router.navigate(['/certificados', this.idCertificado]);
   }
 }
