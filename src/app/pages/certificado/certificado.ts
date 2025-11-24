@@ -12,18 +12,17 @@ import { Certificado as CertificadoInterface } from '../../interfaces/certificad
   templateUrl: './certificado.html',
   styleUrl: './certificado.css',
 })
-export class Certificado implements OnInit{
+export class Certificado implements OnInit {
   id: string | null = null;
   certificado: CertificadoInterface | undefined;
-  constructor(private certificadoService: CertificadoService, private route: ActivatedRoute) {}
+  constructor(private certificadoService: CertificadoService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-  this.route.paramMap.subscribe((params) => {
-    this.id = params.get('id');
-    this.certificado = this.certificadoService.certificados.find(
-      (item) => item.id == this.id
-    );
-  })
-  console.log(this.certificado);
+    this.route.paramMap.subscribe((params) => {
+      this.id = params.get('id');
+      this.certificado = this.certificadoService.certificados.find(
+        (item) => item.id == this.id
+      );
+    })
   }
 }
